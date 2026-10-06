@@ -42,7 +42,7 @@ export default function AuthForm() {
     console.log(mode, form);
 
     // Setelah login/daftar berhasil, kembali ke Home
-    router.push("/");
+    router.push("/dashboard/pembeli");
   }
 
   const inputClass =
