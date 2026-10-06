@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { Bricolage_Grotesque, Figtree } from "next/font/google";
+import SearchProduct from "@/components/SearchProduct";
 
 const display = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -776,26 +777,9 @@ function MarketplaceHeader({ search, setSearch, cartCount }) {
           </Link>
 
           {/* SEARCH */}
-
-          <div className="relative min-w-0 flex-1">
-            <IconSearch className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#632713]/45 sm:left-5 sm:h-5 sm:w-5" />
-
-            <input
-              type="search"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Cari makanan, daerah, atau cerita..."
-              className="h-11 w-full rounded-full border border-[#632713]/12 bg-white pl-11 pr-12 text-xs text-[#632713] shadow-sm outline-none transition placeholder:text-[#632713]/40 focus:border-[#EC6426] focus:ring-4 focus:ring-[#EC6426]/10 sm:h-12 sm:pl-[52px] sm:pr-16 sm:text-sm"
-            />
-
-            <button
-              type="button"
-              className="absolute right-1 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-[#EC6426] text-white transition hover:bg-[#632713] sm:right-1.5 sm:h-9 sm:w-12"
-              aria-label="Cari"
-            >
-              <IconSearch className="h-4 w-4" />
-            </button>
-          </div>
+            <div className="relative min-w-0 flex-1">
+                <SearchProduct />
+            </div>
 
           {/* ACTIONS */}
 
