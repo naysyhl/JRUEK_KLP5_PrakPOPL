@@ -1,0 +1,73 @@
+.showcase-wrap {
+  display: flex;
+  gap: 1rem;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+}
+
+.showcase-col {
+  flex: 1;
+  overflow: hidden;
+}
+
+.showcase-track {
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+
+.showcase-card {
+  position: relative;
+  flex-shrink: 0;
+  height: 260px;
+  margin-bottom: 1rem;
+  border-radius: 1.25rem;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.showcase-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 55%);
+}
+
+.showcase-label {
+  position: absolute;
+  left: 1rem;
+  bottom: 0.9rem;
+  z-index: 1;
+  color: #fff;
+  font-weight: 700;
+}
+
+.showcase-card:nth-child(3n + 1) { height: 320px; }
+.showcase-card:nth-child(3n + 2) { height: 220px; }
+.showcase-card:nth-child(3n + 3) { height: 270px; }
+
+
+@keyframes scroll-up {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+@keyframes scroll-down {
+  from { transform: translateY(-50%); }
+  to { transform: translateY(0); }
+}
+
+.showcase-up { animation: scroll-up 35s linear infinite; }
+.showcase-down { animation: scroll-down 35s linear infinite; }
+
+.showcase-wrap:hover .showcase-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .showcase-track { animation: none; }
+}
