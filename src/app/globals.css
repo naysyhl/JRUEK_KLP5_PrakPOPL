@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+  --color-jruek-orange: #EC6426;
+  --color-jruek-yellow: #F8A91F;
+  --color-jruek-cream: #FDE3CF;
+  --color-jruek-brown: #632713;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FDE3CF;
+  --foreground: #632713;
 }
 
 @theme inline {
@@ -10,13 +17,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
