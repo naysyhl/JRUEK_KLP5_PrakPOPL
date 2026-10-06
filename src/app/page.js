@@ -545,9 +545,12 @@ export default function Home() {
           </div>
 
 
-          <button className="rounded-full bg-jruek-orange px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-jruek-brown focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+          <a
+            href="/login"
+            className="rounded-full bg-jruek-orange px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-jruek-brown focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          >
             Masuk / Daftar
-          </button>
+          </a>
 
         </nav>
       </header>
